@@ -1,0 +1,70 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* classes */
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-link-login{
+    border: 1px solid #fff;
+    padding: 4px 22px;
+    border-radius: 5px;
+    margin-left: 18px;
+}
+.escurecer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* header */
+header{
+    position: absolute;
+    width: 100%;
+    padding: 2.3% 0;
+}
+header a{
+    margin-left: 15px;
+    color: #fff;
+}
+.logo a{
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+/* hero img */
+.hero-burger{
+    background: url(../img/hero-burger.jpg) center center;
+    background-size: cover;
+    height: 95vh;
+    max-height: 980px;
+    text-align: center;
+    color: #fff;
+}
+.hero-burger h1{
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+.hero-burger p{
+    margin-bottom: 20px;
+}
