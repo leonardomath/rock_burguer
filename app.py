@@ -1,10 +1,6 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from models.Visitas import Visitas
-
-import os
-
-base_dir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:root@localhost/postgres'
@@ -15,7 +11,7 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def index():
-    return '<h1>index</h1>'
+    return render_template('index.html')
 
 @app.route('/reservar_mesa', methods=['POST'])
 def reservar_mesa():
@@ -32,5 +28,5 @@ def set_visita():
     db.session.commit()
     return '<h1>Visita cadastrada</h1>'
 
-
+db.create_all()
 app.run()
