@@ -1,0 +1,11 @@
+{%if mensagens%}
+{%for mensagem in mensagens%}
+<div class="box-lanche">
+    <div class="box-desc">
+        <h1>{{mensagem.nome_contato}}</h1>
+        <p>{{mensagem.email_contato}}</p>
+        <p>{{mensagem.mensagem}}</p>
+    </div>
+</div>
+{%endfor%}
+{%endif%}

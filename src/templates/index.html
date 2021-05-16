@@ -1,5 +1,5 @@
 {% extends 'layout.html' %}
-    
+{% include 'header.html' %}
 {% block content %}
     <section class="hero-burger">
         <div class="escurecer column">
@@ -9,4 +9,24 @@
             </div>
         </div>
     </section>
+
+    <div class="container">
+        {% include 'lanches.html' %}
+    </div>
+
+    <div class="local">
+
+    </div>
+
+    <div class="contato">
+        <div class="container">
+            <form action="/nova_mensagem" method="POST">
+                <h1>Envie uma mensagem</h1>
+                <input type="text" name="nome" placeholder="Seu nome">
+                <input type="email" name="email" placeholder="Seu e-mail">
+                <textarea name="mensagem" placeholder="Sua mensagem"></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div> 
 {% endblock %}

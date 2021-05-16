@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+    
+{% block content %}
+<a class="btn-sair" href="/dashboard/sair">Sair</a>
+
+<div class="container">
+    <div class="contador_visitas"><h1>Total de visitas: {{visitas}}</h1></div>
+    <form class="form_lanche" action="/dashboard/novo_produto" method="POST" enctype="multipart/form-data">
+        <h2>Cadastrar novo lanche</h2>
+        <input type="text" placeholder="Titulo" name="titulo">
+        <textarea name="descricao" cols="30" rows="10" placeholder="Descrição" name="descricao"></textarea>
+        <input type="file" name="foto">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div class="lanches-container">
+        {%if lanches%}
+        {%for lanche in lanches%}
+        <div class="box-lanche">
+            <div class="box-img">
+                <img src="uploads/{{lanche.foto}}">
+            </div>
+            <div class="box-desc">
+                <h1>{{lanche.titulo}}</h1>
+                <p>{{lanche.descricao}}</p>
+                <a class="btn-remover" href="/dashboard/remover/{{lanche.id_lanche}}">Remover</a>
+            </div>
+        </div>
+        {%endfor%}
+        {%endif%}
+    </div>
+</div>
+{% endblock %}
