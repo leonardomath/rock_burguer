@@ -1,0 +1,13 @@
+<div class="contador_visitas">
+    <div class="contador">
+        <h1>Total de visitas: {{visitas}}</h1>
+    </div>
+    <div class="acoes">
+        {% if not mensagem %}
+        <a class="" href="/dashboard/mensagens">Mensagens</a>
+        {% else %}
+        <a class="" href="/dashboard">voltar</a>
+        {% endif %}
+        <a class="" href="/dashboard/sair">Sair</a>
+    </div>
+</div>

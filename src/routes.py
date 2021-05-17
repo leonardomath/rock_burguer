@@ -67,8 +67,9 @@ def dashboard():
 @app.route('/dashboard/mensagens')
 def mensagens():
     mensagens = Mensagens.query.all()
+    visitas = Visitas.query.count()
 
-    return render_template('mensagens.html', mensagens=mensagens)
+    return render_template('mensagens.html', mensagens=mensagens, visitas=visitas, mensagem=True)
 
 @app.route('/contato')
 def contato():

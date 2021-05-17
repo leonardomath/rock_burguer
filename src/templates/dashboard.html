@@ -1,10 +1,10 @@
 {% extends 'layout.html' %}
     
 {% block content %}
-<a class="btn-sair" href="/dashboard/sair">Sair</a>
+
 
 <div class="container">
-    <div class="contador_visitas"><h1>Total de visitas: {{visitas}}</h1></div>
+    {% include 'menu.html' %}
     <form class="form_lanche" action="/dashboard/novo_produto" method="POST" enctype="multipart/form-data">
         <h2>Cadastrar novo lanche</h2>
         <input type="text" placeholder="Titulo" name="titulo">

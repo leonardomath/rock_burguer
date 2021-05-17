@@ -14,19 +14,29 @@
         {% include 'lanches.html' %}
     </div>
 
-    <div class="local">
+    <section class="info">
+        <div class="container sobre">
+            <div class="endereco">
+                <p>- +55 11 9999-9999</p>
+                <p>- contato@rockburger.com</p>
+                <p>- Rua Ali Perto - São Paulo</p>
+                <p>- Horário 19:00 às 4:50 <span class="status"></span></p>
+            </div>
+            <div class="right">
+                <button class="btn-message" onclick="abrir_formulario()">Envie uma mensagem</button>
+            </div>
+        </div>
+    </section>
 
+    <div class="overlay">
+        <form class="form_contato" action="/nova_mensagem" method="POST">
+            <button type="button" class="fechar" onclick="fecharForm()">X</button>
+            <input type="text" name="nome" placeholder="Seu nome">
+            <input type="email" name="email" placeholder="Seu e-mail">
+            <textarea name="mensagem" placeholder="Sua mensagem"></textarea>
+            <input type="submit" value="Enviar">
+        </form>
     </div>
 
-    <div class="contato">
-        <div class="container">
-            <form action="/nova_mensagem" method="POST">
-                <h1>Envie uma mensagem</h1>
-                <input type="text" name="nome" placeholder="Seu nome">
-                <input type="email" name="email" placeholder="Seu e-mail">
-                <textarea name="mensagem" placeholder="Sua mensagem"></textarea>
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </div> 
+    <footer>Rockburger - Todos os direitos reservados</footer>
 {% endblock %}

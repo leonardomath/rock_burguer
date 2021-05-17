@@ -8,6 +8,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    background: #1B1B1C;
+}
+
 /* classes */
 .container{
     max-width: 1280px;
@@ -18,6 +22,12 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.right {
+    text-align: center;
+    padding-top: 20px;
+}
+
 .column{
     display: flex;
     flex-direction: column;
@@ -71,15 +81,29 @@ header a{
 
 .contador_visitas {
     padding: 20px;
-    border: 1px solid #424242;
+    /* border: 1px solid #424242; */
     margin: 20px 0px;
     color: #424242;
+    background: #111212;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.acoes {
+    text-align: right;
+    padding-top: 10px;
+}
+
+.acoes a {
+    color: #fff;
+    margin: 0 10px;
 }
 
 .form_lanche {
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
+    color: #fff;
 }
 
 .form_lanche input, .form_lanche textarea {
@@ -98,9 +122,9 @@ input[type=submit] {
     font-size: 12px;
     border: none;
     cursor: pointer;
-    background: #1B5E20;
+    background: #E19200;
     font-weight: bold;
-    color: #fff;
+    color: #000;
 }
 
 .btn-remover {
@@ -125,7 +149,10 @@ input[type=submit] {
     width: 100%;
     max-width: 300px;
     height: 310px;
-    border: 1px solid #424242;
+    /* background: #E19200; */
+    background: #111212;
+    /* color: #111212; */
+    color: #fff;
 }
 
 .box-img {
@@ -149,4 +176,126 @@ input[type=submit] {
     position: absolute;
     top: 10px;
     right: 10px;
+}
+
+.form_contato{
+    width: 100%;
+    max-width: 400px;
+    /* margin: 60px auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #111212;
+    padding: 60px;
+    border-radius: 40px;
+}
+
+.form_contato input {
+    height: 40px;
+}
+
+.form_contato input, .form_contato textarea {
+    width: 100%;
+    max-width: 250px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.info {
+    background: #111212;
+}
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 0;
+}
+
+.endereco {
+    color: #fff;
+}
+
+.endereco p {
+    margin: 5px 0;
+}
+
+.btn-message {
+    padding: 20px 80px;
+    background: #E19200;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+footer {
+    background: #E19200;
+    padding: 10px 0;
+    text-align: center;
+    color: #000;
+}
+
+.fechar {
+    position: relative;
+    right: -170;
+    top: -40;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 100%;
+    background: #E19200;
+    cursor: pointer;
+}
+
+
+.dashboard-login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-login input {
+    width: 280px;
+    height: 40px;
+    margin: 2px 0px;
+    padding-left: 5px;
+}
+
+.box-mensagem {
+    width: 100%;
+    padding: 10px;
+    background: #111212 ;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    margin: 10px 0;
+}
+
+.mensagem {
+    padding-top: 5px;
+}
+
+.title {
+    color: #E19200;
+    text-align: center;
+    margin-bottom: 10px;
 }

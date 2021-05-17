@@ -1,11 +1,22 @@
-{%if mensagens%}
-{%for mensagem in mensagens%}
-<div class="box-lanche">
-    <div class="box-desc">
-        <h1>{{mensagem.nome_contato}}</h1>
-        <p>{{mensagem.email_contato}}</p>
-        <p>{{mensagem.mensagem}}</p>
+{% extends 'layout.html' %}
+    
+{% block content %}
+
+<div class="container">
+    {% include 'menu.html' %}
+    {%if mensagens%}
+    {%for mensagem in mensagens%}
+    <div class="box-mensagem">
+        <div class="user">
+            <h1>{{mensagem.nome_contato}}</h1>
+            <p>{{mensagem.email_contato}}</p>
+        </div>
+        <div class="mensagem">
+            <p>{{mensagem.mensagem}}</p>
+        </div>
     </div>
+    {%endfor%}
+    {%endif%}
 </div>
-{%endfor%}
-{%endif%}
+
+{% endblock %}
