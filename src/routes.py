@@ -2,11 +2,9 @@ import socket
 from datetime import datetime
 import bcrypt
 from flask import make_response, request, url_for, send_from_directory, session
-from flask.signals import message_flashed
-from werkzeug.datastructures import ViewItems
 from werkzeug.utils import redirect
 import os
-from bcrypt import _bcrypt, hashpw
+from bcrypt import hashpw
 
 from .app import app, db, render_template
 from .models.Visitas import Visitas
